@@ -35,6 +35,9 @@ public class Main {
                 case 3:
                     q.printQueue();
                     break;
+                case 0:
+                    System.out.println("Exiting...");
+                    break;
                 default:
                     System.out.println("Please enter valid key.");
                     break;

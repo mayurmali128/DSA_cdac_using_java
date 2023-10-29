@@ -31,7 +31,8 @@ public class SpecialCircularQueue {
 
         rear = (rear + 1) % size;
         arr[rear] = data;
-        front = (front +1)%size;
+        if(isFull())
+            front = (front +1)%size;
 
     }
 
@@ -59,9 +60,9 @@ public class SpecialCircularQueue {
         for(i=front; i!=rear; i = (i+1)%size){
             System.out.print(arr[i] + " ");
         }
-
-        if(i==rear)
-            System.out.println(arr[rear]);
+        
+        //for printing rear
+        System.out.println(arr[rear]);
 
     }
 }
